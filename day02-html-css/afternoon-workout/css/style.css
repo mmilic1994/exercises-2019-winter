@@ -1,0 +1,72 @@
+body {
+    font-family: Trebuchet MS, sans-serif;
+    text-align: center;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    background-color: grey;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    color: #d6d6d6;
+  }
+  
+  p a {
+    color: rgba(255, 245, 253, 0.5);
+  }
+  
+  a:hover {
+    color: white;
+  }
+  
+  img {
+    opacity: 0.5;
+    width: 400px;
+  }
+  
+  img:hover {
+    opacity: 1;
+  }
+  
+  h2 {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    color: dodgerblue;
+    background-color: white;
+    width: 100vw;
+  }
+  
+  .center {
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+  }
+  
+  button {
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1.25rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid white;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+  }
+  
+  .the-text {
+    color: blue;
+  }
+  
+  .the-text.colorized {
+    color: pink;
+    font-size: 2rem;
+  }
+  
