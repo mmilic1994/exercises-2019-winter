@@ -1,0 +1,15 @@
+article {
+    width: 1000px;
+    margin: 0 auto;
+    border: 1px solid red;
+    height: 10em;
+    overflow: hidden;
+}
+article > div {
+    border: 1px solid black;
+    /* float: left; */
+}
+article img {
+    width: 10em;
+    float: left;
+}

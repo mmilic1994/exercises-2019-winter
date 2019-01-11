@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header,
+footer,
+main,
+nav,
+aside,
+div {
+    padding: 1em;
+    border: 1px solid gray;
+    margin: 0.25em;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    order: -1;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+main > nav {
+    /* order: -1; */
+}
+
+.content {
+    display: flex;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+}
+
+.center > nav {
+    order: -1;
+}

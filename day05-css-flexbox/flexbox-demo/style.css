@@ -1,0 +1,12 @@
+article {
+    display: flex;
+    width: 50em;
+    height: 30em;
+    border: 1px solid blue;
+
+    align-items: center;
+}
+
+article > div {
+    border: 1px solid black;
+}
