@@ -1,0 +1,22 @@
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+main p {
+    margin: 1em;
+}
+
+@media all and (max-width: 620px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    main p {
+        margin: 1em 0;
+    }
+}
+
