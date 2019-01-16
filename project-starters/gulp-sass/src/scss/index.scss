@@ -1,0 +1,25 @@
+@import 'colors';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: $bg-primary;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 1rem auto;
+  background-color: $bg-secondary;
+}
+
+h1 {
+  color: $text-color;
+}
