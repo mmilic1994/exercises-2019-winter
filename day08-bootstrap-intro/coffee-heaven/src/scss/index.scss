@@ -1,0 +1,51 @@
+$heaven-red: #c50000;
+$coffee-brown: #3b270c;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: black url('/img/coffee-photo.jpg') center/cover;
+  height: 100vh;
+  margin: 0;
+}
+
+aside {
+  width: 350px;
+  height: 100%;
+  margin-left: auto;
+  padding: 1rem 3rem;
+  background-color: $coffee-brown;
+  color: white;
+  opacity: 0.75;
+}
+
+aside {
+  color: white;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+  }
+
+  p {
+    line-height: 150%;
+  }
+
+  .spacer {
+    margin: 4rem 0;
+  }
+
+  button {
+    color: white;
+    background-color: $heaven-red;
+    border: 1px solid white;
+    border-radius: 5px;
+    line-height: 4rem;
+    font-size: 1.25rem;
+    padding: 0 2rem;
+  }
+}
