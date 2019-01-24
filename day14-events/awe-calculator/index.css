@@ -11,6 +11,7 @@ body {
   background: #f3efe8 url('img/bg.svg') center/cover; 
   width: 100vw;
   height: 100vh;
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,22 +19,34 @@ body {
 
 .calc {
   width: 12rem;
-  height: 20rem;
   background-color: white;
   box-shadow: 0px 0px 32px gray;
 }
 
-.calc__screen {
+.calc__result {
+  height: 3.5rem;
+  line-height: 3.5rem;
+  color: white;
+  text-align: right;
+  background-color: #867666;
+  border: none;
+  outline: none;
+  font-size: 220%;
+  padding: 0 1rem;
+  font-weight: 300;
+}
+
+.calc__input {
   width: 100%;
   display: block;
-  height: 3rem;
-  line-height: 2.6rem;
+  height: 2.5rem;
+  line-height: 2.1rem;
   color: white;
   text-align: right;
   background-color: #e1b80D;
   border: none;
   outline: none;
-  font-size: 180%;
+  font-size: 150%;
   padding: 0.4rem 1rem 0 1rem;
   font-weight: 300;
 }
@@ -44,12 +57,26 @@ body {
   background-color: #eee;
   cursor: pointer;
   border: none;
-  font-size: 200%;
+  font-size: 150%;
+  font-weight: 300;
+}
+
+.calc__btn--digit {
+  width: 3rem;
+  height: 3rem;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  font-size: 150%;
   font-weight: 300;
 }
 
 .calc__btn:hover {
   background-color: #ddd;
+}
+
+.calc__btn--digit:hover {
+  background-color: #eee;
 }
 
 .calc__controls {

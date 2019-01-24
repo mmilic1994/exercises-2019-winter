@@ -10,13 +10,28 @@
 </head>
 <body>
   <div class="calc">
-    <input type="text" class="calc__screen" value="0" />
+    <div class="calc__result">0</div>
+    <input type="text" class="calc__input" value="0" />
     <div class="calc__controls">
+      <button class="calc__btn--digit">7</button>
+      <button class="calc__btn--digit">8</button>
+      <button class="calc__btn--digit">9</button>
       <button id="btn-plus" class="calc__btn">&plus;</button>
+      
+      <button class="calc__btn--digit">4</button>
+      <button class="calc__btn--digit">5</button>
+      <button class="calc__btn--digit">6</button>
       <button id="btn-minus" class="calc__btn">&minus;</button>
+      
+      <button class="calc__btn--digit">1</button>
+      <button class="calc__btn--digit">2</button>
+      <button class="calc__btn--digit">3</button>
       <button id="btn-times" class="calc__btn">&times;</button>
-      <button id="btn-divide" class="calc__btn">&divide;</button>
+      
+      <button class="calc__btn--digit">0</button>
+      <button id="btn-clear" class="calc__btn">C</button>
       <button id="btn-equals" class="calc__btn">=</button>
+      <button id="btn-divide" class="calc__btn">&divide;</button>
     </div>
   </div>
   <script src="index.js"></script>
