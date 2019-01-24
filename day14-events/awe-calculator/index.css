@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
 
@@ -35,6 +35,7 @@ body {
   outline: none;
   font-size: 180%;
   padding: 0.4rem 1rem 0 1rem;
+  font-weight: 300;
 }
 
 .calc__btn {
@@ -44,8 +45,14 @@ body {
   cursor: pointer;
   border: none;
   font-size: 200%;
+  font-weight: 300;
+}
+
+.calc__btn:hover {
+  background-color: #ddd;
 }
 
 .calc__controls {
   display: flex;
+  flex-wrap: wrap;
 }

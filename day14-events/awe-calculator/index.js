@@ -18,7 +18,34 @@ const equals = () => {
     case '-':
       screen.value = number1 - number2;
       break;
+    case '*':
+      screen.value = number1 * number2;
+      break;
+    case '/':
+      screen.value = number1 / number2;
+      break;
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('#btn-plus').addEventListener('click', () => {
+    binOp('+'); 
+  });
+
+  document.querySelector('#btn-minus').addEventListener('click', () => {
+    binOp('-'); 
+  });
+
+  document.querySelector('#btn-times').addEventListener('click', () => {
+    binOp('*'); 
+  });
+
+  document.querySelector('#btn-divide').addEventListener('click', () => {
+    binOp('/'); 
+  });
+
+  document.querySelector('#btn-equals').addEventListener('click', equals);
+});
+
 
 
