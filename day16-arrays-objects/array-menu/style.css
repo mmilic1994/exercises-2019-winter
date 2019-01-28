@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.menu {
+  background-color: orange;
+  color: white;
+  width: 250px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.menu__item {
+  padding: 1rem 0;
+}
