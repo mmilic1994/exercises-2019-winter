@@ -194,7 +194,7 @@ const conversation = [
 function createMessage(msg) {
   return (
     `<div class="message ${msg.side}">
-      <div class="head">
+      <div class="head ${msg.name.toLowerCase()}">
         <img src="img/${msg.name.toLowerCase()}.png"/>
       </div>
       <div class="text">${msg.text}</div>
@@ -206,5 +206,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const chat = document.getElementById('chat');
   for(let item of conversation) {
     chat.innerHTML += createMessage(item);
+  }
+
+  const heads = document.querySelectorAll('.head');
+  for(let head of heads) {
+    head.addEventListener('click', (e) => {
+      const who = e.target.parentNode.classList[1];
+     
+      if(who === 'unicorn') {
+        alert('I Love You');
+      } else {
+        alert('Fuck off');
+      }
+    });
   }
 });
