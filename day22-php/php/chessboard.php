@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * gets a color of a chessboard square using it's
+ * coordinates
+ */
 function getColor($i, $j)
 {
     if (($i + $j) % 2 == 0) {
