@@ -1,0 +1,6 @@
+{
+    "name": "jpola/portfolio",
+    "require": {
+        "phpmailer/phpmailer": "^6.0"
+    }
+}
