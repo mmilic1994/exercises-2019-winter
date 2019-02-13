@@ -1,0 +1,21 @@
+students
+--------
+id: INT(11)
+first_name: VARCHAR(127)
+last_name: VARCHAR(127)
+is_sober: TINYINT(1), default: 0
+average_score: DECIMAL(15, 4)
+class_attendance: DECIMAL(15, 4)
+graduation_year: YEAR
+date_of_birth: DATE
+logged_in: DATETIME
+graduated: TINYINT(1)
+address: TEXT 
+gender: VARCHAR(1)
+student_id_nr: VARCHAR(32)
+class: VARCHAR(2)
+
+test_results
+------------
+id:
+student_id:
