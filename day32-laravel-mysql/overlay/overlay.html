@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Overlay example</title>
+
+    <link rel="stylesheet" href="overlay.css">
+</head>
+<body>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+
+    <button id="open-overlay">Open overlay</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum voluptatibus sint qui magni atque perferendis sed quis dolor, error sapiente veritatis porro non debitis dolore mollitia at eveniet. Exercitationem, ad.</p>
+    
+
+    <script>
+document.getElementById('open-overlay').addEventListener('click', function(ev) {
+    ev.preventDefault();
+
+    console.log('button clicked!');
+
+    let virtual = document.createElement('div');
+
+    virtual.innerHTML = '<div id="overlay"><div class="close">X</div><div class="inner"><iframe width="560" height="315" src="https://www.youtube.com/embed/LML6SoNE7xE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>';
+
+    let my_element = virtual.firstChild;
+
+    document.body.appendChild(my_element);
+})
+    </script>
+</body>
+</html>
