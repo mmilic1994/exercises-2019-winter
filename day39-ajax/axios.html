@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX with Axios</title>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+
+    <select id="categories"></select>
+
+
+    <script>
+    
+axios.get('https://classes.codingbootcamp.cz/assets/classes/602/guardian.php')
+.then(data => {
+
+    // project-specific usage of the data:
+    data.data.data.map((item) => {
+        document.getElementById('categories').innerHTML += `<option value="${item}">${item}</option>`;
+    })
+
+    console.log('second');
+})
+
+console.log('first');
+    </script>
+    
+</body>
+</html>
