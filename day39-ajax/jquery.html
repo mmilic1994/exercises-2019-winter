@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX with jQuery</title>
+
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <select id="categories"></select>
+
+    <script>
+    
+$.ajax({
+    method: 'get', // get or post
+    url: 'https://classes.codingbootcamp.cz/assets/classes/602/guardian.php',
+    success: function(data, status) {
+        data.data.map((item, i) => {
+            $('#categories').append(`<option value="${i}">${item}</option>`);
+        })
+    }
+});
+    
+    </script>
+    
+</body>
+</html>
