@@ -6,6 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>AJAX with jQuery</title>
 
+<style>
+    #articles {
+        margin: 0 auto;
+        max-width: 600px;
+    }
+    article {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 0.5em 0;
+        border-bottom: 1px solid silver;
+    }
+    article a {
+        color: #4f4f4f;
+        text-decoration: none;
+    }
+    article a:hover {
+        text-decoration: underline;
+    }
+</style>
+
     <script
   src="http://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -15,17 +34,48 @@
 
     <select id="categories"></select>
 
+    <div id="articles"></div>
+
     <script>
     
 $.ajax({
     method: 'get', // get or post
     url: 'https://classes.codingbootcamp.cz/assets/classes/602/guardian.php',
     success: function(data, status) {
-        data.data.map((item, i) => {
-            $('#categories').append(`<option value="${i}">${item}</option>`);
+        data.data.map((item) => {
+            $('#categories').append(`<option value="${item}">${item}</option>`);
         })
     }
 });
+
+document.getElementById('categories').addEventListener('change', (event) => {
+    let value = event.target.value;
+
+    $.ajax({
+        method: 'get',
+        url: `https://classes.codingbootcamp.cz/assets/classes/602/guardian.php?cat=${value}`,
+        success: function(data, status) {
+
+            // do something with the data (not critical to running AJAX)
+            document.getElementById('articles').innerHTML = '';
+            data.data.channel.item.forEach((article) => {
+                let article_html = `
+                    <article>
+                        <h2>
+                            <a href="${article.link}">${article.title}</a>
+                        </h2>
+                        <p>${article.description}</p>
+                    </article>
+                `;
+                document.getElementById('articles').innerHTML += article_html;
+            })
+            
+        }
+
+    })
+
+
+})
     
     </script>
     
