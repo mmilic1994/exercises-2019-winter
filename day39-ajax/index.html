@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX</title>
+</head>
+<body>
+
+    <div id="messages">
+
+    </div>
+
+    <select id="articles"></select>
+
+
+    <script>
+// ajax function
+const ajax = (method, url, data, callback) => {
+
+    // create object that represents the AJAX request
+    let ajax = new XMLHttpRequest();
+
+    // open the connection
+    ajax.open(method, url);
+
+    ajax.onreadystatechange = () => {
+        if(ajax.readyState == 4) { // 4 == request returned with a response
+            // call the function that is in callback variable
+            // with the ajax object as argument
+            (callback)(ajax);
+        }
+    }
+
+    // turn the data that we got as argument into a query string
+    var queryString = Object.keys(data).map((key) => {
+        return encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+    }).join('&');
+
+    // actually send the request (with the query string)
+    ajax.send(queryString);
+}
+    
+// usage:
+ajax('GET', 'endpoint.php', {}, (ajax) => {
+
+    // do something
+    console.log('OMG! The request is back:', ajax);
+
+    // parse the response text as JSON
+    let data = JSON.parse(ajax.responseText);
+
+    console.log(data);
+
+    // just print out the error messages in the page
+    let html = '';
+    data.errors.forEach((item) => {
+        html += '<div class="message">'+item+'</div>';
+    })
+
+    document.getElementById('messages').innerHTML = html;
+
+})
+
+console.log('This happens right after the request was sent (step 6 on board)');
+
+console.log('(step 7 on board)');
+
+console.log('Life goes on...');
+
+ajax('get', 'https://classes.codingbootcamp.cz/assets/classes/602/guardian.php', {}, (ajax) => {
+
+    // parse the response text as JSON
+    let data = JSON.parse(ajax.responseText);
+
+    // just print out the error messages in the page
+    let html = '';
+    data.data.forEach((item) => {
+        html += '<option>'+item+'</option>';
+    })
+
+    document.getElementById('articles').innerHTML = html;
+
+})
+    
+    </script>
+    
+</body>
+</html>
