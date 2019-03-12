@@ -1,0 +1,9 @@
+.counter {
+  font-size: 400%;
+  font-weight: bold;
+}
+
+.btn-red {
+  color: white;
+  background: red;
+}
