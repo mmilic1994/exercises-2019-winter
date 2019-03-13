@@ -1,0 +1,40 @@
+.chapter {
+  display: flex;
+  margin-bottom: 1rem;
+  
+  &__day {
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: 0.5rem;
+    color: white;
+    background: cornflowerblue;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+
+    &--done {
+      background: orange;
+    }
+  }
+
+  &__lead {
+    flex: 1;
+    background: white;
+    padding: 1.5rem;
+  }
+
+  &__title {
+    font-size: 140%;
+    margin-bottom: 1rem;
+  }
+
+  &__summary {
+    color: #444;
+  }
+}
+
+.day__name {
+  font-size: 140%;
+  margin-bottom: 0.25rem;
+}
