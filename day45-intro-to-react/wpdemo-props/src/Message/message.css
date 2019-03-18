@@ -1,0 +1,14 @@
+.message {
+  background-color: lightblue;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.text {
+  line-height: 1.5rem;
+}

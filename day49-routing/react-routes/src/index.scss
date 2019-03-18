@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+header {
+  height: 3rem;
+  background: darkblue;
+  display: flex;
+  justify-content: space-around;
+  line-height: 3rem;
+
+  a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
