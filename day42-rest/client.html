@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+
+    <script>
+        
+    let data = {
+        name: 'Bruce',
+        surname: 'Wayne',
+        age: 80,
+        vehicles: [
+            'batmobile',
+            'batbike',
+            'batbaloon'
+        ]
+    }
+
+    fetch('server.php', {
+        method: 'POST',
+        body: JSON.stringify(data)
+    })
+    .then(r => r.json())
+    .then(data => {
+
+        // expecting some JSON out of the API response
+        document.querySelector('h1').innerHTML = data.message;
+
+    });
+    
+    
+    </script>
+    
+</body>
+</html>
