@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
+import { store } from './Provider'
+
 import Product from './Product'
 
 export default class ProductList extends React.Component {
@@ -54,13 +56,29 @@ export default class ProductList extends React.Component {
         })
     }
 
+    addProductToBasket(product_id) {
+        console.log('Adding to basket product ', product_id);
+
+        // dispatch an action into the store
+        store.dispatch({
+            type: 'ADD_PRODUCT_TO_BASKET',
+            id: product_id
+        })
+    }
+
     render() {
 
         let products = [];
 
         this.state.products_data.forEach(item => {
             products.push(
-                <Product img_url={ item.img_url } name={ item.name } key={ item.id } />
+                <Product 
+                    img_url={ item.img_url } 
+                    name={ item.name } 
+                    id={ item.id } 
+                    key={ item.id } 
+                    addToBasketClick={ product_id => this.addProductToBasket(product_id) }
+                />
             )
         })
 
